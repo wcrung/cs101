@@ -17,7 +17,5 @@ int main()
             printf("%d 元",i);
         }
     }
-        
-
     return 0;
 }
