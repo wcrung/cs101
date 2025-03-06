@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 5 int main() { FILE *fp; int array1[SIZE] = {0, 1, 2, 3, 4};
+float array2[SIZE] = {1.1, 2.2, 3.3, 4.4, 5.5};
+char array3[SIZE] = {'A', 'B', 'C', 'D', 'E'}; fp = fopen("a.bin", "wb");
+if (file == NULL) { perror("無法開啟檔案"); return 1; } fwrite(arr_write1, sizeof(int), SIZE, file);
+fwrite(arr_write2, sizeof(float), SIZE, file);
+fwrite(arr_writ3, sizeof(char), SIZE, file); fclose(file); int read_array1[SIZE] = {0};
+float read_array2[SIZE] = {0}; char read_array3[SIZE] = {0}; file = fopen("a.bin", "rb");
+if (file == NULL) { perror("無法開啟檔案"); return 1;
+} fread(arr_read1, sizeof(int), SIZE, file); fread(arr_read2, sizeof(float), SIZE, file);
+fread(arr_read3, sizeof(char), SIZE, file); fclose(file);
+for (int i = 0; i < SIZE; i++) { printf("%d ", arr_read1[i]);
+} printf("\n"); for (int i = 0; i < SIZE; i++) { printf("%.1f ", arr_read2[i]);
+} printf("\n"); for (int i = 0; i < SIZE; i++) { printf("%d ", arr_read3[i]); } printf("\n");
+return 0; }
