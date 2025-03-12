@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    char a[] = "10001111";
+    printf("%X\n", (int)strtol(a, NULL, 2));
+    return 0;
+}
