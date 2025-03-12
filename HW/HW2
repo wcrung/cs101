@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(){
+    char a[] = "A4B1C3f3";
+    for (int i=0; a[i] !='\0';i++){
+        char ch = a[i];
+        int n = a[++i]-'0';
+        while (isdigit(a[i+1]))
+        n = n * 10 + (a[++i]-'0');
+        for (int j=0; j<n ;j++)
+        printf("%c", ch);
+    }
+    return 0;
+}
