@@ -19,13 +19,6 @@ class Car{
         m_MaxSeating = s;
         m_UpdatePrice();
     }
-    int get_MaxSeating(){
-        
-    }
-    int get_Price(){
-        
-    }
-
 };
 
 class BMW_Car : public Car{
